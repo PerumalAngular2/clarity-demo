@@ -1,0 +1,43 @@
+<clr-main-container>
+  <clr-header class="header header-4">
+    <div class="branding">
+      <a href="#" class="nav-link">
+        <span class="clr-icon clr-clarity-logo"></span>
+        <span class="title">Clarity</span>
+      </a>
+    </div>
+    <form class="search">
+      <label for="search_input">
+        <input id="search_input" type="text" placeholder="Search for Components...">
+      </label>
+    </form>
+    <div class="header-actions">
+      <clr-dropdown class="dropdown bottom-right">
+            <button class="nav-icon" clrDropdownToggle>
+                <clr-icon shape="cog"></clr-icon>
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <div class="dropdown-menu">
+                <a clrDropdownItem>About</a>
+                <a clrDropdownItem>Preferences</a>
+                <a clrDropdownItem (click)="onClick()">Log out</a>
+            </div>
+        </clr-dropdown>
+    </div>
+  </clr-header>
+  <nav class="sub-nav" [clr-nav-level]="1">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#" >Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" >About</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="content-container">
+    <div class="content-area">
+        Content are starts here
+    </div>
+  </div>
+</clr-main-container>
