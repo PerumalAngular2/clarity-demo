@@ -1,14 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+import { User } from '../user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  constructor() { }
+  @Input() user:User[]=[];
 
-  ngOnInit() {
+  constructor(private userService:UserService) { }
+
+  onSubmit(user: User){
+    //console.log(user);
+    this.userService.login(user);
   }
 
 }

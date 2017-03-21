@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { routing } from './app.routing';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { routing } from './app.routing';
     ClarityModule.forRoot(),
     routing
   ],
-  providers: [],
+  providers: [ UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

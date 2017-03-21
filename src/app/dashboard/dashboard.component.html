@@ -1,5 +1,5 @@
 <clr-main-container>
-  <clr-header>
+  <clr-header class="header header-4">
     <div class="branding">
       <a href="#" class="nav-link">
         <span class="clr-icon clr-clarity-logo"></span>
@@ -12,6 +12,17 @@
       </label>
     </form>
     <div class="header-actions">
+      <clr-dropdown class="dropdown bottom-right">
+            <button class="nav-icon" clrDropdownToggle>
+                <clr-icon shape="cog"></clr-icon>
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <div class="dropdown-menu">
+                <a clrDropdownItem>About</a>
+                <a clrDropdownItem>Preferences</a>
+                <a clrDropdownItem (click)="onClick()">Log out</a>
+            </div>
+        </clr-dropdown>
     </div>
   </clr-header>
   <nav class="sub-nav" [clr-nav-level]="1">
@@ -30,23 +41,3 @@
     </div>
   </div>
 </clr-main-container>
-
-
-
-<div class="main-container">
-   
-    <header class="header header-1">
-        ...
-    </header>
-    <nav class="subnav">
-        ...
-    </nav>
-    <div class="content-container">
-        <div class="content-area">
-            ...
-        </div>
-        <nav class="sidenav">
-            ...
-        </nav>
-    </div>
-</div>
