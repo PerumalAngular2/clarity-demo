@@ -290,7 +290,8 @@ var AppModule = (function () {
 
 
 var APP_ROUTES = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_1__login_login_component__["a" /* LoginComponent */] },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_1__login_login_component__["a" /* LoginComponent */] },
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard_component__["a" /* DashboardComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_1__login_login_component__["a" /* LoginComponent */] }
 ];
